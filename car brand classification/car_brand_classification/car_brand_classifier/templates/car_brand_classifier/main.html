@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <titl></titl></title>
+
+</head>
+<body>
+<div>
+    <hr>
+    <h3 style="color :blue">Ai demo</h3>
+
+
+    <form style=" text-align :right ; " method="POST", action="welcome/">
+
+        <button style="color : red ;" type="button" >Home</button>
+    </form>
+    <hr>
+</div>
+    <h1>Image classifier</h1>
+    <form method="POST" , enctype="multipart/form-data">
+        {% csrf_token %}
+        <input  type="file" , name="doc">
+        <button style="color : red ; " type="submit" >upload file</button>
+    </form>
+    {% if file %}
+        <h3>Succesfully uploaded : {{file.name}}</h3>
+        <h4>{{pred}}</h4>
+        <img src={{url}} alt="connect" style="max-height:300px">
+    {% endif %}
+
+<div>
+
+
+</div>
+
+
+
+</body>
+</html>
